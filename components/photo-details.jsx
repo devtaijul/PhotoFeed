@@ -1,12 +1,14 @@
 import { getDictionary } from "@/app/[lang]/dictionaries";
+import { ENV } from "@/config/env.config";
 import Image from "next/image";
 
 export const PhotoDetails = async ({ photo_id, lang }) => {
-  const photo = await fetch(`${process.env.BASE_API_URL}/photos/${photo_id}`, {
+  const photo = await fetch(`${ENV.BASE_API_URL}/photos/${photo_id}`, {
     headers: {},
-  }).then((res) => res.json());
+  })
+    .then((res) => res.json())
+    .catch((error) => console.log(error));
   const dictionaries = await getDictionary(lang);
-  console.log(dictionaries, photo);
 
   return (
     <div className="grid grid-cols-12 gap-4 2xl:gap-10 ">
