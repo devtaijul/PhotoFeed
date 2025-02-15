@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { useEffect, useRef } from "react";
 import { createPortal } from "react-dom";
 
 export const Modal = ({ children }) => {
+  const router = useRouter();
   const modalRef = useRef(null);
 
   useEffect(() => {
@@ -13,7 +15,9 @@ export const Modal = ({ children }) => {
     }
   }, []);
 
-  const onHide = () => {};
+  const onHide = () => {
+    router.back();
+  };
   return createPortal(
     <dialog
       ref={modalRef}
