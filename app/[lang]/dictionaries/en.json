@@ -1,3 +1,8 @@
 {
-  "hello": "Hello"
+  "views": "Views",
+  "share": "Share",
+  "uploadedOn": "Uploaded On",
+  "save": "Save",
+  "followers": "Followers",
+  "follow": "Follow"
 }

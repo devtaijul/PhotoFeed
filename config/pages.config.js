@@ -1,6 +1,6 @@
 export const PAGES = {
   PHOTOS: {
     ROOT: "/",
-    PHOTO: ({ photo_id }) => `/${photo_id}`,
+    PHOTO: ({ photo_id }) => `/photos/${photo_id}`,
   },
 };
