@@ -76,6 +76,7 @@ export const PhotoDetails = async ({ photo_id, lang }) => {
                 className="w-5 h-5"
                 width={30}
                 height={30}
+                alt="foolow"
               />
               {dictionaries.follow}
             </button>
